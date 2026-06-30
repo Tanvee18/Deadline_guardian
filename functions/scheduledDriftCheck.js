@@ -1,6 +1,6 @@
 const { onSchedule } = require("firebase-functions/v2/scheduler");
 const admin = require("firebase-admin");
-const Orchestrator = require("../agents/orchestrator");
+const Orchestrator = require("./agents/orchestrator");
 
 // Periodically run monitor checks on calendar blocks
 exports.scheduledDriftCheck = onSchedule({
