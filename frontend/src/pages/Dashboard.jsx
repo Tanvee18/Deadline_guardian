@@ -112,7 +112,7 @@ export default function Dashboard() {
       // Points to our local emulator functions API
       const baseUrl = window.location.hostname === "localhost"
         ? "http://localhost:5001/deadline-guardian-demo/us-central1/api"
-        : "/api"; // fallback for deployed function
+        : (import.meta.env.VITE_API_URL || "/api"); // fallback for deployed function
 
       const response = await fetch(`${baseUrl}/${endpoint}`, {
         method: "POST",
