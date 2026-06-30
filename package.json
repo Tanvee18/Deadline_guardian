@@ -1,0 +1,20 @@
+{
+  "name": "deadline-guardian",
+  "version": "1.0.0",
+  "description": "DeadlineGuardian - AI-powered productivity companion",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "functions"
+  ],
+  "scripts": {
+    "install-all": "npm install --legacy-peer-deps && npm install --workspace=frontend --legacy-peer-deps && npm install --workspace=functions --legacy-peer-deps",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:emulators": "npx firebase emulators:start",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build:functions": "npm run build --workspace=functions"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.12.0"
+  }
+}
