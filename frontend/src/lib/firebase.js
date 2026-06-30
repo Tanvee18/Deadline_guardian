@@ -12,6 +12,9 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:1234567890:web:abcdef123456"
 };
 console.log("Firebase Config:", firebaseConfig);
+console.log("API KEY =", import.meta.env.VITE_FIREBASE_API_KEY);
+console.log("AUTH DOMAIN =", import.meta.env.VITE_FIREBASE_AUTH_DOMAIN);
+console.log("ALL ENV =", import.meta.env);
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
