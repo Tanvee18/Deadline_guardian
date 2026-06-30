@@ -12,13 +12,13 @@ if (admin.apps.length === 0) {
 const db = admin.firestore();
 
 // Import agents from sibling directory
-const Orchestrator = require("../agents/orchestrator");
-const { extractDeadline } = require("../agents/deadlineExtractionAgent");
-const { planTask } = require("../agents/plannerAgent");
-const { scheduleTasks } = require("../agents/schedulerAgent");
-const { monitorSchedule } = require("../agents/monitorAgent");
-const { replanSchedule } = require("../agents/replannerAgent");
-const { explainSchedule } = require("../agents/communicatorAgent");
+const Orchestrator = require("./agents/orchestrator");
+const { extractDeadline } = require("./agents/deadlineExtractionAgent");
+const { planTask } = require("./agents/plannerAgent");
+const { scheduleTasks } = require("./agents/schedulerAgent");
+const { monitorSchedule } = require("./agents/monitorAgent");
+const { replanSchedule } = require("./agents/replannerAgent");
+const { explainSchedule } = require("./agents/communicatorAgent");
 
 const app = express();
 app.use(cors({ origin: true }));
