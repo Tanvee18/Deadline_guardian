@@ -29,7 +29,7 @@ googleProvider.addScope("https://www.googleapis.com/auth/calendar.events");
 if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
   // Check if connection is already initialized to avoid multiple binding warnings
   if (!auth.emulatorConfig) {
-    connectAuthEmulator(auth, "http://localhost:9099", { disableWarnings: true });
+    //connectAuthEmulator(auth, "http://localhost:9099", { disableWarnings: true });
     connectFirestoreEmulator(db, "localhost", 8080);
     console.log("Connected to Firebase Auth and Firestore Emulators.");
   }
